@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="A quick access web to-do-list" />
+
+    <!---------- FONT-FAMILY ------------->
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>TO-DO-LIST</title>
+  </head>
+  <!-- ⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀
+-->
+  <body class="">
+    <header>
+      <div class="theme">
+        <div class="container">
+          <img
+            src="./icons/light_mode_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="light mode icon"
+            id="lightmode-icon"
+            onmouseover="hoverIcon()"
+            onmouseleave="hoverIconNegative()"
+          />
+          <img
+            src="./icons/nightlight_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="dark mode icon"
+            id="darkmode-icon"
+            onmouseover="hoverIcon()"
+            onmouseout="hoverIconNegative()"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!--  -->
+    <main>
+      <section class="to-do-list">
+        <!--  -->
+        <div class="container">
+          <div class="header">
+            <h1>TO-DO-LIST</h1>
+          </div>
+          <div class="tasks">
+            <ul id="list-container"></ul>
+          </div>
+
+          <div id="add-tasks">
+            <input type="text" id="text-input" />
+            <button onclick="addTask()" onkeypress="addTask_key()">add</button>
+          </div>
+        </div>
+        <!--  -->
+      </section>
+    </main>
+  </body>
+</html>
